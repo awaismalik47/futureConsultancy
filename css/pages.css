@@ -2,7 +2,7 @@
 .page-banner {
   margin-top: 70px;
   height: 280px;
-  background: linear-gradient(135deg, #1a2547, #0f1730);
+  background: linear-gradient(135deg, #1e3a8a 0%, #1a2547 50%, #0f1730 100%);
   position: relative;
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@
 .banner-overlay {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=60') center/cover;
+  background: url('../assets/images/university-campus.jpg') center/cover;
   opacity: 0.15;
 }
 
@@ -31,7 +31,7 @@
   color: rgba(255,255,255,0.7);
 }
 
-.breadcrumb a { color: #e84040; text-decoration: none; }
+.breadcrumb a { color: #60a5fa; text-decoration: none; }
 .breadcrumb span { color: rgba(255,255,255,0.5); }
 
 @media (max-width: 576px) {

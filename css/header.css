@@ -11,7 +11,7 @@ header {
 }
 
 header.scrolled {
-  background: #1a2547;
+  background: linear-gradient(135deg, #1a2547, #0f1730);
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
@@ -23,10 +23,10 @@ header.scrolled .nav-link {
 
 header.scrolled .nav-link:hover,
 header.scrolled .nav-link.active {
-  color: #e84040;
+  color: #60a5fa;
 }
 
-header.scrolled .nav-phone .nav-link { color: #e84040; }
+header.scrolled .nav-phone .nav-link { color: #60a5fa; }
 
 header.scrolled .hamburger span { background: #fff; }
 
@@ -49,7 +49,7 @@ header.scrolled .hamburger span { background: #fff; }
 .logo-icon {
   width: 42px;
   height: 42px;
-  background: linear-gradient(135deg, #1a2547, #2d3f7c);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -58,7 +58,7 @@ header.scrolled .hamburger span { background: #fff; }
   font-weight: 800;
   font-size: 12px;
   letter-spacing: 0.5px;
-  border: 2px solid #e84040;
+  border: 2px solid rgba(255,255,255,0.3);
 }
 
 .logo-text {
@@ -75,7 +75,7 @@ header.scrolled .hamburger span { background: #fff; }
 
 .logo-sub {
   font-size: 9px;
-  color: #e84040;
+  color: #2563eb;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -129,7 +129,7 @@ header.scrolled .hamburger span { background: #fff; }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #e84040;
+  color: #2563eb;
 }
 
 .nav-link.active {
@@ -141,13 +141,13 @@ header.scrolled .hamburger span { background: #fff; }
 }
 
 .nav-phone .nav-link {
-  color: #e84040;
+  color: #2563eb;
   font-weight: 600;
 }
 
 .nav-booking-btn {
   display: inline-block;
-  background: #e84040;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff !important;
   padding: 10px 20px;
   border-radius: 6px;
@@ -160,9 +160,9 @@ header.scrolled .hamburger span { background: #fff; }
 }
 
 .nav-booking-btn:hover {
-  background: #c73030;
+  filter: brightness(1.1);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(232,64,64,0.4);
+  box-shadow: 0 4px 15px rgba(37,99,235,0.4);
 }
 
 .dropdown {
@@ -178,7 +178,7 @@ header.scrolled .hamburger span { background: #fff; }
   transform: translateY(10px);
   transition: all 0.25s ease;
   pointer-events: none;
-  border-top: 3px solid #e84040;
+  border-top: 3px solid #2563eb;
   z-index: 100;
 }
 
@@ -199,8 +199,8 @@ header.scrolled .hamburger span { background: #fff; }
 }
 
 .dropdown-link:hover {
-  color: #e84040;
-  background: #fff5f5;
+  color: #2563eb;
+  background: #eff6ff;
   padding-left: 26px;
 }
 

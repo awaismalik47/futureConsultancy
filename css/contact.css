@@ -12,7 +12,7 @@
   padding: 16px;
   background: #f8f9fc;
   border-radius: 10px;
-  border-left: 3px solid #e84040;
+  border-left: 3px solid #2563eb;
 }
 
 .info-card h4 { font-size: 14px; font-weight: 700; color: #1a2547; margin-bottom: 4px; }
@@ -22,7 +22,7 @@
   width: 44px;
   height: 44px;
   min-width: 44px;
-  background: #e84040;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -116,9 +116,9 @@
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #e84040;
+  border-color: #2563eb;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(232,64,64,0.1);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
 }
 
 .form-group input::placeholder,
@@ -132,7 +132,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #e84040;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   padding: 14px 36px;
   border: none;
@@ -144,7 +144,7 @@
   width: 100%;
 }
 
-.btn-submit:hover { background: #c73030; transform: translateY(-2px); }
+.btn-submit:hover { filter: brightness(1.1); transform: translateY(-2px); }
 
 .map-section { padding-bottom: 80px; }
 .map-wrapper {
@@ -172,7 +172,7 @@
   transition: border-color 0.2s;
 }
 
-.faq-item.open { border-color: #e84040; }
+.faq-item.open { border-color: #2563eb; }
 
 .faq-q {
   width: 100%;
@@ -191,7 +191,7 @@
 }
 
 .faq-q i {
-  color: #e84040;
+  color: #2563eb;
   font-size: 14px;
   transition: transform 0.2s;
 }

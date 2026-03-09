@@ -1,6 +1,6 @@
 /* Footer */
 .footer {
-  background: #0f1730;
+  background: linear-gradient(180deg, #0f1730 0%, #1a2547 100%);
   color: #aab2cc;
   margin-top: auto;
 }
@@ -25,7 +25,7 @@
 
 .footer-booking-btn {
   display: inline-block;
-  background: #e84040;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   padding: 12px 24px;
   border-radius: 6px;
@@ -37,7 +37,7 @@
 }
 
 .footer-booking-btn:hover {
-  background: #d03030;
+  filter: brightness(1.1);
   color: #fff;
 }
 
@@ -51,7 +51,7 @@
 .footer .logo-icon {
   width: 42px;
   height: 42px;
-  background: linear-gradient(135deg, #1a2547, #2d3f7c);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -59,7 +59,7 @@
   justify-content: center;
   font-weight: 800;
   font-size: 12px;
-  border: 2px solid #e84040;
+  border: 2px solid rgba(255,255,255,0.3);
 }
 
 .footer .logo-text {
@@ -76,7 +76,7 @@
 
 .footer .logo-sub {
   font-size: 9px;
-  color: #e84040;
+  color: #60a5fa;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -108,7 +108,7 @@
 }
 
 .social-link:hover {
-  background: #e84040;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   transform: translateY(-2px);
 }
@@ -119,7 +119,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 12px;
-  border-bottom: 2px solid #e84040;
+  border-bottom: 2px solid #2563eb;
   display: inline-block;
 }
 
@@ -143,12 +143,12 @@
 
 .footer-links a::before {
   content: '›';
-  color: #e84040;
+  color: #60a5fa;
   font-size: 16px;
 }
 
 .footer-links a:hover {
-  color: #e84040;
+  color: #60a5fa;
   padding-left: 4px;
 }
 
@@ -165,7 +165,7 @@
 }
 
 .contact-item i {
-  color: #e84040;
+  color: #60a5fa;
   font-size: 15px;
   margin-top: 2px;
   flex-shrink: 0;
@@ -178,7 +178,7 @@
 }
 
 .contact-item a:hover {
-  color: #e84040;
+  color: #60a5fa;
 }
 
 .footer-map iframe {

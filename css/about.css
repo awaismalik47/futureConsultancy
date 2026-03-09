@@ -22,7 +22,7 @@
   position: absolute;
   bottom: 30px;
   right: 30px;
-  background: #e84040;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   font-size: 22px;
   font-weight: 800;
@@ -41,7 +41,7 @@
   padding: 16px;
   background: #f8f9fc;
   border-radius: 8px;
-  border-left: 3px solid #e84040;
+  border-left: 3px solid #2563eb;
 }
 
 .value-item h4 { font-size: 15px; font-weight: 700; color: #1a2547; margin-bottom: 4px; }
@@ -50,7 +50,7 @@
 .value-icon {
   width: 44px;
   height: 44px;
-  background: #e84040;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -101,7 +101,7 @@
   bottom: -50px;
   left: 0;
   right: 0;
-  background: rgba(232,64,64,0.9);
+  background: rgba(37,99,235,0.9);
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -126,11 +126,11 @@
 }
 
 .team-info h3 { font-size: 16px; font-weight: 700; color: #1a2547; margin-bottom: 4px; }
-.team-info span { font-size: 12px; color: #e84040; font-weight: 600; display: block; margin-bottom: 8px; }
+.team-info span { font-size: 12px; color: #2563eb; font-weight: 600; display: block; margin-bottom: 8px; }
 .team-info p { font-size: 13px; color: #777; line-height: 1.5; }
 
 .cta-simple {
-  background: #1a2547;
+  background: linear-gradient(135deg, #1a2547, #1e3a8a);
   padding: 70px 20px;
   text-align: center;
 }
@@ -140,7 +140,7 @@
 
 .btn-cta {
   display: inline-block;
-  background: #e84040;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   padding: 14px 40px;
   border-radius: 4px;
@@ -152,7 +152,7 @@
   transition: all 0.3s;
 }
 
-.btn-cta:hover { background: #c73030; transform: translateY(-2px); }
+.btn-cta:hover { filter: brightness(1.1); transform: translateY(-2px); }
 
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; }
