@@ -1,0 +1,39 @@
+/* Shared page styles - banner, breadcrumb, etc. */
+.page-banner {
+  margin-top: 70px;
+  height: 280px;
+  background: linear-gradient(135deg, #1a2547, #0f1730);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=60') center/cover;
+  opacity: 0.15;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.banner-content h1 { font-size: 42px; font-weight: 800; margin-bottom: 12px; }
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+}
+
+.breadcrumb a { color: #e84040; text-decoration: none; }
+.breadcrumb span { color: rgba(255,255,255,0.5); }
+
+@media (max-width: 576px) {
+  .banner-content h1 { font-size: 30px; }
+}
