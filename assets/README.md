@@ -2,6 +2,9 @@
 
 ## images/
 
+### Logo
+- **futureConsultancyLogo.png** – Site logo (header & footer). Use PNG with transparent background for best results.
+
 ### Shared
 - **university-campus.jpg** – University campus (About section, page banners)
 
