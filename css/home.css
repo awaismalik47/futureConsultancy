@@ -2,7 +2,7 @@
 .hero {
   margin-top: 70px;
   position: relative;
-  height: 600px;
+  height: 800px;
   overflow: hidden;
 }
 
@@ -15,13 +15,41 @@
   display: flex;
   align-items: center;
   position: relative;
-  min-height: 600px;
+  min-height: 800px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Visa – passport/immigration */
+/* Video slides - mobile: hide videos, show background images */
+.hero-slide-desktop-video .hero-video-bg {
+  display: none;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Desktop: show videos, hide background images */
+@media (min-width: 769px) {
+  .hero-slide-desktop-video .hero-video-bg {
+    display: block;
+  }
+  .hero-slide-desktop-video {
+    background-image: none !important;
+  }
+}
+
+/* Visa – passport/immigration (desktop fallback; mobile uses country images below) */
 .hero-slide-visa {
   background-image: linear-gradient(135deg, rgba(15,23,48,0.55) 0%, rgba(26,37,71,0.5) 50%, rgba(30,58,138,0.45) 100%), url('../assets/images/passport.jpg');
 }
@@ -39,6 +67,25 @@
 /* MBBS Abroad – medical university/students */
 .hero-slide-medical {
   background-image: linear-gradient(135deg, rgba(26,37,71,0.55) 0%, rgba(37,99,235,0.5) 50%, rgba(59,130,246,0.45) 100%), url('../assets/images/mbbs.jpg');
+}
+
+/* Mobile: famous country place images (USA, UK, Australia, Canada, New Zealand) */
+@media (max-width: 768px) {
+  .hero-slide-video.hero-slide-desktop-video {
+    background-image: linear-gradient(135deg, rgba(15,23,48,0.55) 0%, rgba(26,37,71,0.5) 50%, rgba(30,58,138,0.45) 100%), url('../assets/images/hero-mobile/usa.jpg');
+  }
+  .hero-slide-visa.hero-slide-desktop-video {
+    background-image: linear-gradient(135deg, rgba(15,23,48,0.55) 0%, rgba(26,37,71,0.5) 50%, rgba(30,58,138,0.45) 100%), url('../assets/images/hero-mobile/uk.jpg');
+  }
+  .hero-slide-students.hero-slide-desktop-video {
+    background-image: linear-gradient(135deg, rgba(12,25,41,0.55) 0%, rgba(26,37,71,0.5) 50%, rgba(30,64,175,0.45) 100%), url('../assets/images/hero-mobile/australia.jpg');
+  }
+  .hero-slide-students2.hero-slide-desktop-video {
+    background-image: linear-gradient(135deg, rgba(15,23,48,0.55) 0%, rgba(26,37,71,0.5) 50%, rgba(30,58,138,0.45) 100%), url('../assets/images/hero-mobile/canada.jpg');
+  }
+  .hero-slide-medical.hero-slide-desktop-video {
+    background-image: linear-gradient(135deg, rgba(26,37,71,0.55) 0%, rgba(37,99,235,0.5) 50%, rgba(59,130,246,0.45) 100%), url('../assets/images/hero-mobile/newzealand.jpg');
+  }
 }
 
 .hero-overlay {
