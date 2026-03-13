@@ -102,7 +102,7 @@ header.scrolled {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  border-radius: var(--radius-input);
+  /* border-radius: var(--radius-input); */
   border-bottom: 2px solid transparent;
   transition: var(--transition);
   white-space: nowrap;
