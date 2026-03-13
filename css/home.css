@@ -453,7 +453,7 @@
 
 .stat-label {
   font-size: 14px;
-  color: var(--color-text-muted);
+  color: var(--color-white);
   font-weight: 500;
 }
 
@@ -483,11 +483,8 @@
 }
 
 .global-network-carousel-wrap {
-  position: relative;
   overflow: hidden;
-  background: #2BA9E0;
   border-radius: 12px;
-  padding: 20px 0;
 }
 
 .global-network-swiper {
