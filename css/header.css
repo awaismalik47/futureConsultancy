@@ -67,9 +67,9 @@ header.scrolled {
 }
 
 .desktop-nav {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
+  /* flex: 1; */
+  /* display: flex; */
+  /* justify-content: flex-end; */
 }
 
 .nav-list {
@@ -239,15 +239,18 @@ header.scrolled {
 
   .desktop-nav {
     position: fixed;
-    top: 70px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--color-dark);
+    background:
+      radial-gradient(circle at top left, rgba(43, 169, 224, 0.25), transparent 55%),
+      radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.45), transparent 60%),
+      var(--color-dark);
     overflow-y: auto;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    padding: 20px;
+    padding: 90px 24px 28px;
   }
 
   .desktop-nav.open {
@@ -283,7 +286,6 @@ header.scrolled {
     pointer-events: all;
   }
 
-  .nav-item:hover .dropdown,
   .nav-item.mobile-open .dropdown {
     display: block;
   }
