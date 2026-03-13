@@ -1,30 +1,39 @@
-/* Global Styles - Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ============================================
+   Future Consultancy Service — Base & Variables
+   Government / authority immigration portal style
+   ============================================ */
 
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
-  --primary-gradient: linear-gradient(135deg, #2563eb, #1d4ed8);
-  --primary-gradient-light: linear-gradient(135deg, #3b82f6, #2563eb);
-  --secondary: #1a2547;
-  --secondary-dark: #0f1730;
-  --secondary-light: #2d3f7c;
-  --text-dark: #1a2547;
-  --text-gray: #666;
-  --text-light: #999;
-  --white: #ffffff;
-  --bg-light: #f8f9fc;
-  --border: #e8e8e8;
-  --shadow: 0 4px 20px rgba(0,0,0,0.08);
-  --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
-  --shadow-primary: 0 6px 20px rgba(37,99,235,0.4);
-  --transition: all 0.3s ease;
-  --radius: 8px;
+  /* Brand colors */
+  --color-primary: #004D8E;
+  --color-dark: #061B36;
+  --color-accent: #2BA9E0;
+  --color-white: #ffffff;
+  --color-light-bg: #e8f2fb;
+  --color-mid-bg: #d0e6f7;
+  --color-text: #1a1a2e;
+  --color-text-muted: #4a5a6a;
+  --color-border: rgba(0, 77, 142, 0.15);
+  --color-footer-bottom: #020f1f;
+  --color-rating: #e6b800;
+
+  /* Utilities */
+  --transition: 0.3s ease;
+  --radius-card: 10px;
+  --radius-btn: 6px;
+  --radius-badge: 20px;
+  --radius-input: 6px;
+  --shadow: 0 4px 20px rgba(6, 27, 54, 0.10);
+  --shadow-hover: 0 8px 30px rgba(0, 77, 142, 0.18);
+}
+
+/* Global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -33,8 +42,8 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: var(--text-dark);
-  background: #fff;
+  color: var(--color-text);
+  background: var(--color-light-bg);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -49,61 +58,39 @@ img {
   height: auto;
 }
 
+::selection {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
+/* Horizontal rule / dividers */
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--color-border);
+  margin: 24px 0;
+}
+
+/* Section utilities */
 .section-padding {
   padding: 80px 0;
 }
 
-.btn-primary {
-  display: inline-block;
-  background: var(--primary-gradient);
-  color: #fff;
-  padding: 14px 32px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: var(--transition);
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background: var(--primary-gradient);
-  filter: brightness(1.1);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-primary);
-}
-
-.btn-outline {
-  display: inline-block;
-  background: transparent;
-  color: #fff;
-  padding: 14px 32px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  border: 2px solid #fff;
-  text-transform: uppercase;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.btn-outline:hover {
-  background: #fff;
-  color: var(--secondary);
-}
-
 .section-label {
   display: block;
-  color: var(--primary);
+  color: var(--color-primary);
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -114,13 +101,13 @@ img {
 .section-title {
   font-size: 36px;
   font-weight: 800;
-  color: var(--secondary);
+  color: var(--color-dark);
   line-height: 1.3;
   margin-bottom: 16px;
 }
 
 .section-subtitle {
-  color: var(--text-gray);
+  color: var(--color-text-muted);
   font-size: 16px;
   max-width: 600px;
 }
@@ -128,14 +115,56 @@ img {
 .text-center { text-align: center; }
 .mb-50 { margin-bottom: 50px; }
 .mx-auto { margin: 0 auto; }
+.text-muted { color: var(--color-text-muted); }
 
-/* WhatsApp float - used on all pages */
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px 28px;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-primary);
+  padding: 12px 28px;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: 14px;
+  border: 2px solid var(--color-primary);
+  text-transform: uppercase;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* WhatsApp float — keep brand green */
 .whatsapp-float {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background: #25d366;
-  color: #fff;
+  background: #25D366;
+  color: var(--color-white);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -144,17 +173,24 @@ img {
   font-size: 15px;
   font-weight: 600;
   z-index: 999;
-  box-shadow: 0 4px 15px rgba(37,211,102,0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: var(--transition);
   text-decoration: none;
 }
+
 .whatsapp-float i { font-size: 20px; }
+
 .whatsapp-float:hover {
+  background: #20bd5a;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 }
 
 @media (max-width: 768px) {
   .section-title { font-size: 28px; }
   .section-padding { padding: 60px 0; }
+}
+
+@media (min-width: 320px) {
+  .container { padding: 0 16px; }
 }

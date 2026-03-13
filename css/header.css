@@ -1,41 +1,20 @@
-/* Header */
+/* ============================================
+   Header — Dark from start (immi-style authority portal)
+   ============================================ */
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  background: var(--color-dark);
+  transition: var(--transition);
 }
 
 header.scrolled {
-  background: linear-gradient(135deg, #1a2547, #0f1730);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(6, 27, 54, 0.35);
 }
-
-
-header.scrolled .nav-link {
-  color: rgba(255,255,255,0.9);
-}
-
-header.scrolled .nav-link:hover:not(.disabled),
-header.scrolled .nav-link.active {
-  color: #60a5fa;
-}
-
-.nav-item.has-dropdown:has(.nav-link.disabled) {
-  pointer-events: none;
-}
-
-.nav-item.has-dropdown:has(.nav-link.disabled) .dropdown {
-  display: none !important;
-}
-
-header.scrolled .nav-phone .nav-link { color: #60a5fa; }
-
-header.scrolled .hamburger span { background: #fff; }
 
 .header-inner {
   display: flex;
@@ -56,8 +35,8 @@ header.scrolled .hamburger span { background: #fff; }
 .logo-icon {
   width: 42px;
   height: 42px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #fff;
+  background: var(--color-accent);
+  color: var(--color-white);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -65,7 +44,6 @@ header.scrolled .hamburger span { background: #fff; }
   font-weight: 800;
   font-size: 12px;
   letter-spacing: 0.5px;
-  border: 2px solid rgba(255,255,255,0.3);
 }
 
 .logo-text {
@@ -77,18 +55,16 @@ header.scrolled .hamburger span { background: #fff; }
 .logo-main {
   font-size: 18px;
   font-weight: 800;
-  color: #1a2547;
+  color: var(--color-white);
 }
 
 .logo-sub {
   font-size: 9px;
-  color: #2563eb;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
-header.scrolled .logo-main { color: #fff; }
 
 .desktop-nav {
   flex: 1;
@@ -124,10 +100,11 @@ header.scrolled .logo-main { color: #fff; }
   padding: 8px 10px;
   font-size: 13px;
   font-weight: 500;
-  color: #1a2547;
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.2s ease;
+  border-radius: var(--radius-input);
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
   white-space: nowrap;
 }
 
@@ -142,12 +119,14 @@ header.scrolled .logo-main { color: #fff; }
   opacity: 0.5;
 }
 
-.nav-link:hover:not(.disabled),
-.nav-link.active {
-  color: #2563eb;
+.nav-link:hover:not(.disabled) {
+  color: var(--color-white);
+  border-bottom-color: var(--color-accent);
 }
 
 .nav-link.active {
+  color: var(--color-white);
+  border-bottom-color: var(--color-accent);
   font-weight: 600;
 }
 
@@ -156,44 +135,45 @@ header.scrolled .logo-main { color: #fff; }
 }
 
 .nav-phone .nav-link {
-  color: #2563eb;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
 }
 
 .nav-booking-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #fff !important;
+  background: var(--color-accent);
+  color: var(--color-white) !important;
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: var(--radius-btn);
   font-weight: 600;
   font-size: 13px;
-  transition: all 0.3s;
+  transition: var(--transition);
   margin-left: 8px;
   flex-shrink: 0;
   white-space: nowrap;
 }
 
 .nav-booking-btn:hover {
-  filter: brightness(1.1);
+  background: var(--color-primary);
+  color: var(--color-white);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(37,99,235,0.4);
+  box-shadow: var(--shadow-hover);
 }
 
 .dropdown {
   position: absolute;
-  top: calc(100% + 5px);
+  top: 100%;
   left: 0;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  background: var(--color-dark);
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
+  box-shadow: var(--shadow-hover);
   min-width: 220px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.25s ease;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
   pointer-events: none;
-  border-top: 3px solid #2563eb;
+  border-top: 3px solid var(--color-accent);
   z-index: 100;
 }
 
@@ -208,14 +188,14 @@ header.scrolled .logo-main { color: #fff; }
   justify-content: space-between;
   padding: 10px 20px;
   font-size: 13px;
-  color: #333;
-  transition: all 0.2s;
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
   text-decoration: none;
 }
 
 .dropdown-link:hover {
-  color: #2563eb;
-  background: #eff6ff;
+  background: rgba(43, 169, 224, 0.15);
+  color: var(--color-white);
   padding-left: 26px;
 }
 
@@ -233,14 +213,22 @@ header.scrolled .logo-main { color: #fff; }
   display: block;
   width: 24px;
   height: 2px;
-  background: #1a2547;
+  background: var(--color-white);
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: var(--transition);
 }
 
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.nav-item.has-dropdown:has(.nav-link.disabled) {
+  pointer-events: none;
+}
+
+.nav-item.has-dropdown:has(.nav-link.disabled) .dropdown {
+  display: none !important;
+}
 
 @media (max-width: 1200px) {
   .nav-link { padding: 6px 7px; font-size: 12px; }
@@ -255,7 +243,7 @@ header.scrolled .logo-main { color: #fff; }
     left: 0;
     right: 0;
     bottom: 0;
-    background: #fff;
+    background: var(--color-dark);
     overflow-y: auto;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -274,7 +262,7 @@ header.scrolled .logo-main { color: #fff; }
 
   .nav-item {
     width: 100%;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--color-border);
   }
 
   .nav-link {
@@ -290,7 +278,7 @@ header.scrolled .logo-main { color: #fff; }
     transform: none;
     box-shadow: none;
     border: none;
-    background: #f9f9f9;
+    background: rgba(0, 0, 0, 0.2);
     display: none;
     pointer-events: all;
   }
@@ -310,4 +298,8 @@ header.scrolled .logo-main { color: #fff; }
     text-align: center;
     display: block;
   }
+}
+
+@media (min-width: 320px) {
+  .header-inner { height: 64px; }
 }

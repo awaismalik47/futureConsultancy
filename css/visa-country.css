@@ -1,0 +1,398 @@
+/* ============================================
+   Visa country pages — Visit / Student / Working
+   Authority portal: dark sidebar, structured content
+   ============================================ */
+
+.visa-hero {
+  margin-top: 70px;
+  padding: 60px 0 50px;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.visa-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=1600&q=20') center/cover;
+  opacity: 0.08;
+  transition: var(--transition);
+}
+
+/* Country-specific hero background images */
+.visa-country-us .visa-hero::before {
+  background-image: url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=1600&q=20');
+  background-position: center;
+  background-size: cover;
+}
+
+.visa-country-ca .visa-hero::before {
+  background-image: url('https://images.unsplash.com/photo-1519832979-6fa011b87667?w=1600&q=20');
+  background-position: center;
+  background-size: cover;
+}
+
+.visa-country-uk .visa-hero::before {
+  background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=20');
+  background-position: center;
+  background-size: cover;
+}
+
+.visa-country-au .visa-hero::before {
+  background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1600&q=80');
+  background-position: center;
+  background-size: cover;
+}
+
+.visa-country-nz .visa-hero::before {
+  background-image: url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1600&q=20');
+  background-position: center;
+  background-size: cover;
+}
+
+.visa-hero .container {
+  position: relative;
+  z-index: 2;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.visa-hero .country-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(43, 169, 224, 0.15);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 8px 18px;
+  border-radius: var(--radius-badge);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.visa-hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.visa-hero .visa-subtitle {
+  font-size: 17px;
+  opacity: 0.92;
+  max-width: 560px;
+  margin: 0 auto 20px;
+}
+
+.visa-hero .breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.visa-hero .breadcrumb a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.visa-hero .breadcrumb a:hover {
+  color: var(--color-white);
+}
+
+.visa-hero .breadcrumb span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------- Content area: alternating background ---------- */
+.visa-content {
+  padding: 60px 0 80px;
+  background: var(--color-light-bg);
+}
+
+.visa-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.visa-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+/* Sidebar nav — dark panel, white/muted links */
+.visa-sidebar .nav-card {
+  background: var(--color-dark);
+  border-radius: var(--radius-card);
+  padding: 20px 0;
+  border-top: 3px solid var(--color-accent);
+  box-shadow: var(--shadow);
+}
+
+.visa-sidebar .nav-card a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.visa-sidebar .nav-card a:hover {
+  background: rgba(43, 169, 224, 0.15);
+  color: var(--color-accent);
+}
+
+.visa-sidebar .nav-card a.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.visa-sidebar .nav-card a i {
+  width: 20px;
+  text-align: center;
+  color: var(--color-accent);
+}
+
+.visa-sidebar .nav-card a.active i {
+  color: var(--color-white);
+}
+
+/* Requirement blocks — white, left border primary */
+.visa-main .req-block {
+  background: var(--color-white);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-card);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(6, 27, 54, 0.07);
+  scroll-margin-top: 100px;
+}
+
+.visa-main .req-block h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.visa-main .req-block h2 i {
+  color: var(--color-accent);
+  font-size: 20px;
+}
+
+.visa-main .req-block p {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.visa-main .req-block p:last-child {
+  margin-bottom: 0;
+}
+
+.visa-main .req-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visa-main .req-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  line-height: 1.5;
+}
+
+.visa-main .req-list li:last-child {
+  border-bottom: none;
+}
+
+.visa-main .req-list li i.fa-check {
+  color: var(--color-accent);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.visa-main .req-list li strong {
+  color: var(--color-dark);
+}
+
+.visa-main .step-list {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visa-main .step-list li {
+  position: relative;
+  padding-left: 48px;
+  padding-bottom: 24px;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.visa-main .step-list li:last-child {
+  padding-bottom: 0;
+}
+
+.visa-main .step-list li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.visa-main .req-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  margin: 16px 0;
+}
+
+.visa-main .req-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.visa-main .req-table th,
+.visa-main .req-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.visa-main .req-table th {
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.visa-main .req-table tr:last-child td {
+  border-bottom: none;
+}
+
+.visa-main .req-table tr:hover td {
+  background: var(--color-light-bg);
+}
+
+.visa-cta {
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+  border-radius: 12px;
+  padding: 48px 40px;
+  text-align: center;
+  color: var(--color-white);
+  margin-top: 40px;
+}
+
+.visa-cta h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.visa-cta p {
+  opacity: 0.95;
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+.visa-cta .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 14px 28px;
+  border-radius: var(--radius-btn);
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.visa-cta .btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+@media (max-width: 992px) {
+  .visa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visa-sidebar {
+    position: static;
+  }
+
+  .visa-sidebar .nav-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 16px;
+  }
+
+  .visa-sidebar .nav-card a {
+    padding: 10px 16px;
+    border-radius: var(--radius-input);
+  }
+
+  .visa-sidebar .nav-card a.active {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .visa-hero h1 {
+    font-size: 28px;
+  }
+
+  .visa-main .req-block {
+    padding: 24px 20px;
+  }
+
+  .visa-main .req-block h2 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 320px) {
+  .visa-hero { padding: 40px 0 36px; }
+  .visa-content { padding: 40px 0 60px; }
+}

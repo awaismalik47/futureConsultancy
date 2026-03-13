@@ -22,15 +22,15 @@
   position: absolute;
   bottom: 30px;
   right: 30px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary));
+  color: var(--color-white);
   font-size: 22px;
   font-weight: 800;
   padding: 16px 24px;
   border-radius: 12px;
 }
 
-.about-content p { color: #666; line-height: 1.8; }
+.about-content p { color: var(--color-text-muted); line-height: 1.8; }
 
 .about-values { margin-top: 30px; }
 
@@ -39,19 +39,19 @@
   gap: 16px;
   margin-bottom: 20px;
   padding: 16px;
-  background: #f8f9fc;
+  background: var(--color-light-bg);
   border-radius: 8px;
-  border-left: 3px solid #2563eb;
+  border-left: 3px solid var(--color-primary);
 }
 
-.value-item h4 { font-size: 15px; font-weight: 700; color: #1a2547; margin-bottom: 4px; }
-.value-item p { font-size: 13px; color: #666; }
+.value-item h4 { font-size: 15px; font-weight: 700; color: var(--color-dark); margin-bottom: 4px; }
+.value-item p { font-size: 13px; color: var(--color-text-muted); }
 
 .value-icon {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary));
+  color: var(--color-white);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -67,16 +67,16 @@
 }
 
 .team-card {
-  background: #fff;
+  background: var(--color-white);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  box-shadow: var(--shadow);
   transition: all 0.3s;
 }
 
 .team-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  box-shadow: var(--shadow-hover);
 }
 
 .team-img {
@@ -101,7 +101,7 @@
   bottom: -50px;
   left: 0;
   right: 0;
-  background: rgba(37,99,235,0.9);
+  background: var(--color-primary);
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -114,36 +114,36 @@
 }
 
 .team-social a {
-  color: #fff;
+  color: var(--color-white);
   font-size: 16px;
   transition: color 0.2s;
 }
 
-.team-social a:hover { color: #ffd; }
+.team-social a:hover { color: rgba(255, 255, 255, 0.9); }
 
 .team-info {
   padding: 20px;
 }
 
-.team-info h3 { font-size: 16px; font-weight: 700; color: #1a2547; margin-bottom: 4px; }
-.team-info span { font-size: 12px; color: #2563eb; font-weight: 600; display: block; margin-bottom: 8px; }
-.team-info p { font-size: 13px; color: #777; line-height: 1.5; }
+.team-info h3 { font-size: 16px; font-weight: 700; color: var(--color-dark); margin-bottom: 4px; }
+.team-info span { font-size: 12px; color: var(--color-primary); font-weight: 600; display: block; margin-bottom: 8px; }
+.team-info p { font-size: 13px; color: var(--color-text-muted); line-height: 1.5; }
 
 .cta-simple {
-  background: linear-gradient(135deg, #1a2547, #1e3a8a);
+  background: linear-gradient(135deg, var(--color-dark), var(--color-primary));
   padding: 70px 20px;
   text-align: center;
 }
 
-.cta-simple h2 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+.cta-simple h2 { font-size: 32px; font-weight: 800; color: var(--color-white); margin-bottom: 12px; }
 .cta-simple p { color: rgba(255,255,255,0.7); margin-bottom: 30px; }
 
 .btn-cta {
   display: inline-block;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary));
+  color: var(--color-white);
   padding: 14px 40px;
-  border-radius: 4px;
+  border-radius: var(--radius-btn);
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
