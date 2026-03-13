@@ -3,9 +3,8 @@
    ============================================ */
 
 .office-hero {
-  margin-top: 70px;
   position: relative;
-  height: 380px;
+  height: 600px;
   overflow: hidden;
 }
 
@@ -20,7 +19,7 @@
 .office-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(6, 27, 54, 0.85) 0%, rgba(6, 27, 54, 0.75) 100%);
+  background: linear-gradient(135deg, rgba(6, 27, 54, 0.5) 0%, rgba(6, 27, 54, 0.4) 100%);
 }
 
 .office-hero-content {
@@ -49,7 +48,31 @@
   max-width: 500px;
 }
 
-/* Top info section — light-bg, NOT white */
+.office-hero .breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 16px;
+}
+
+.office-hero .breadcrumb a {
+  color: #2BA9E0;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.office-hero .breadcrumb a:hover {
+  color: var(--color-white);
+}
+
+.office-hero .breadcrumb span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Top info section — brand colors */
 .office-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -58,7 +81,7 @@
 }
 
 .office-content-wrap {
-  background: var(--color-light-bg);
+  background: rgba(43, 169, 224, 0.08);
 }
 
 .office-place-card {
@@ -76,14 +99,14 @@
 
 .office-place-card .place-caption {
   padding: 20px 24px;
-  background: var(--color-white);
+  background: #fff;
   font-size: 15px;
-  color: var(--color-text-muted);
-  border-top: 4px solid var(--color-primary);
+  color: rgba(6, 27, 54, 0.75);
+  border-top: 4px solid #004D8E;
 }
 
 .office-place-card .place-caption strong {
-  color: var(--color-dark);
+  color: #061B36;
 }
 
 .office-details {
@@ -100,22 +123,22 @@
   margin-bottom: 24px;
 }
 
-/* Contact detail cards — white, left border primary, icon primary */
+/* Contact detail cards — brand colors */
 .office-details .info-card {
   display: flex;
   gap: 16px;
   margin-bottom: 20px;
   padding: 18px 20px;
-  background: var(--color-white);
+  background: #fff;
   border-radius: var(--radius-card);
-  border-left: 4px solid var(--color-primary);
-  box-shadow: 0 2px 12px rgba(6, 27, 54, 0.07);
+  border-left: 4px solid #004D8E;
+  box-shadow: 0 2px 12px rgba(6, 27, 54, 0.08);
 }
 
 .office-details .info-card h4 {
   font-size: 13px;
   font-weight: 700;
-  color: var(--color-dark);
+  color: #061B36;
   margin-bottom: 6px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -123,7 +146,7 @@
 
 .office-details .info-card p {
   font-size: 15px;
-  color: var(--color-text);
+  color: rgba(6, 27, 54, 0.8);
   margin: 0;
   line-height: 1.5;
 }
@@ -132,8 +155,8 @@
   width: 48px;
   height: 48px;
   min-width: 48px;
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: #004D8E;
+  color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -141,12 +164,12 @@
   font-size: 18px;
 }
 
-/* Map section — mid-bg */
+/* Map section */
 .office-map-section {
   margin-top: 50px;
   padding: 50px 0;
-  background: var(--color-mid-bg);
-  border-top: 1px solid var(--color-border);
+  background: rgba(43, 169, 224, 0.14);
+  border-top: 1px solid rgba(43, 169, 224, 0.25);
 }
 
 .office-map-section .section-title {
@@ -169,8 +192,8 @@
 /* BOOK APPOINTMENT button */
 .office-details .btn-primary,
 .office-booking-btn {
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: #004D8E;
+  color: #fff;
   padding: 12px 28px;
   border-radius: var(--radius-btn);
   font-weight: 600;
@@ -183,7 +206,7 @@
 
 .office-details .btn-primary:hover,
 .office-booking-btn:hover {
-  background: var(--color-accent);
+  background: #2BA9E0;
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
 }
@@ -202,7 +225,7 @@
   }
 
   .office-hero {
-    height: 300px;
+    height: 500px;
   }
 }
 

@@ -301,5 +301,5 @@ header.scrolled {
 }
 
 @media (min-width: 320px) {
-  .header-inner { height: 64px; }
+  .header-inner { height: 70px; }
 }

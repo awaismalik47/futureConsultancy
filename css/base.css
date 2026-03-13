@@ -4,18 +4,18 @@
    ============================================ */
 
 :root {
-  /* Brand colors */
+  /* Brand colors only: #004D8E #061B36 #2BA9E0 */
   --color-primary: #004D8E;
   --color-dark: #061B36;
   --color-accent: #2BA9E0;
   --color-white: #ffffff;
-  --color-light-bg: #e8f2fb;
-  --color-mid-bg: #d0e6f7;
-  --color-text: #1a1a2e;
-  --color-text-muted: #4a5a6a;
-  --color-border: rgba(0, 77, 142, 0.15);
-  --color-footer-bottom: #020f1f;
-  --color-rating: #e6b800;
+  --color-light-bg: rgba(43, 169, 224, 0.08);
+  --color-mid-bg: rgba(43, 169, 224, 0.14);
+  --color-text: #061B36;
+  --color-text-muted: rgba(6, 27, 54, 0.75);
+  --color-border: rgba(43, 169, 224, 0.25);
+  --color-footer-bottom: #061B36;
+  --color-rating: #2BA9E0;
 
   /* Utilities */
   --transition: 0.3s ease;
@@ -46,6 +46,10 @@ body {
   background: var(--color-light-bg);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+main {
+  padding-top: 70px;
 }
 
 a {
