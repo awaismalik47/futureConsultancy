@@ -284,6 +284,149 @@
   .student-image-card { aspect-ratio: 4/3; }
 }
 
+/* Tourist Destinations Section */
+.tourist-destinations-section {
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-light-bg) 50%, var(--color-white) 100%);
+}
+
+.tourist-destinations-subtitle {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.tourist-destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.tourist-destination-card {
+  display: block;
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.tourist-destination-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(43, 169, 224, 0.2);
+}
+
+.tourist-destination-image {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.tourist-destination-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.tourist-destination-card:hover .tourist-destination-image img {
+  transform: scale(1.05);
+}
+
+.tourist-destination-country {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(43, 169, 224, 0.95);
+  color: var(--color-white);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tourist-destination-content {
+  padding: 20px 24px;
+}
+
+.tourist-destination-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.tourist-destination-content p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.tourist-destination-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: gap 0.3s ease;
+}
+
+.tourist-destination-card:hover .tourist-destination-cta {
+  gap: 12px;
+}
+
+.tourist-destination-cta i {
+  font-size: 11px;
+}
+
+.tourist-visa-cta {
+  background: linear-gradient(135deg, rgba(43, 169, 224, 0.08), rgba(0, 77, 142, 0.06));
+  border: 1px solid rgba(43, 169, 224, 0.2);
+  border-radius: 12px;
+  padding: 24px 28px;
+  text-align: center;
+}
+
+.tourist-visa-cta p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--color-dark);
+  line-height: 1.7;
+}
+
+.tourist-visa-cta a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tourist-visa-cta a:hover {
+  color: var(--color-accent);
+}
+
+.tourist-visa-cta i {
+  color: var(--color-primary);
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .tourist-destinations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Visit Visa – Visa Assistance style (reference: spacing & padding) */
 .visit-visa-promo {
   background: var(--color-white);

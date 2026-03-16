@@ -4,7 +4,7 @@
 
 .office-hero {
   position: relative;
-  height: 600px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -19,7 +19,6 @@
 .office-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(6, 27, 54, 0.5) 0%, rgba(6, 27, 54, 0.4) 100%);
 }
 
 .office-hero-content {

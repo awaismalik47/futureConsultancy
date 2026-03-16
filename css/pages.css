@@ -5,7 +5,7 @@
 
 /* ---------- Hero sections (all pages) ---------- */
 .page-banner {
-  min-height: 600px;
+  min-height: 500px;
   background: linear-gradient(135deg, #061B36 0%, #004D8E 100%);
   position: relative;
   display: flex;
@@ -16,7 +16,6 @@
   position: absolute;
   inset: 0;
   background: url('../assets/images/university-campus.jpg') center/cover;
-  opacity: 0.3;
 }
 
 .banner-content {
