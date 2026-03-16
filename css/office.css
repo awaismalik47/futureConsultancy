@@ -72,6 +72,74 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* Intro block — full width above layout */
+.office-intro-block {
+  max-width: 820px;
+  margin-bottom: 48px;
+}
+
+.office-intro-block .section-title {
+  margin-bottom: 16px;
+}
+
+.office-intro-text {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(6, 27, 54, 0.85);
+  margin: 0;
+}
+
+/* Services at this branch */
+.office-services-block {
+  margin-top: 36px;
+  padding: 28px 24px;
+  background: #fff;
+  border-radius: var(--radius-card);
+  border-left: 4px solid #004D8E;
+  box-shadow: 0 2px 12px rgba(6, 27, 54, 0.08);
+}
+
+.office-services-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #061B36;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.office-services-title i {
+  color: #004D8E;
+}
+
+.office-services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.office-services-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(6, 27, 54, 0.8);
+  margin-bottom: 12px;
+  padding-left: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.office-services-list li i {
+  color: #2BA9E0;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.office-services-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* Top info section — brand colors */
 .office-layout {
   display: grid;

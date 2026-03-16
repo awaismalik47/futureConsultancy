@@ -4,13 +4,33 @@
    ============================================ */
 
 .visa-hero {
-  min-height: 600px;
+  /* min-height: 600px; */
   padding: 60px 0 50px;
   background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: stretch;
+}
+
+.visa-hero .visa-hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.visa-hero .visa-hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 27, 54, 0.5);
+  z-index: 1;
 }
 
 .visa-hero::before {
@@ -23,6 +43,11 @@
   background: url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=1600&q=20') center/cover;
   opacity: 0.35;
   transition: var(--transition);
+  z-index: 0;
+}
+
+.visa-hero.has-video::before {
+  display: none;
 }
 
 /* Country-specific hero background images */

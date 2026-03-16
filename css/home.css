@@ -218,6 +218,298 @@
   bottom: 35px !important;
 }
 
+/* Student images section */
+.student-images-section {
+  background: linear-gradient(180deg, var(--color-light-bg) 0%, var(--color-white) 100%);
+}
+
+.student-images-subtitle {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 40px;
+  color: var(--color-text-muted);
+  font-size: 16px;
+}
+
+.student-images-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.student-image-card {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(43, 169, 224, 0.25);
+}
+
+.student-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.student-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(6, 27, 54, 0.85));
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.student-image-card:hover .student-image-overlay {
+  background: linear-gradient(transparent, rgba(43, 169, 224, 0.9));
+}
+
+@media (max-width: 992px) {
+  .student-images-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 576px) {
+  .student-images-grid { grid-template-columns: 1fr; }
+  .student-image-card { aspect-ratio: 4/3; }
+}
+
+/* Visit Visa – Visa Assistance style (reference: spacing & padding) */
+.visit-visa-promo {
+  background: var(--color-white);
+}
+
+.visit-visa-promo-inner {
+  display: grid;
+  grid-template-columns: minmax(260px, 28%) 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.visit-visa-promo-header {
+  position: sticky;
+  top: 100px;
+  padding-left: 0;
+}
+
+/* Heading: prominent, dark, bold */
+.visit-visa-promo-title {
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+}
+
+/* Teal underline: short, small gap below heading */
+.visit-visa-promo-accent {
+  width: 48px;
+  height: 4px;
+  background: #0db4b9;
+  border-radius: 2px;
+  margin: 0 0 24px 0;
+}
+
+/* Paragraph: noticeable space below underline, lighter grey */
+.visit-visa-promo-desc {
+  font-size: 15px;
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 320px;
+}
+
+.visit-visa-promo-slider-wrap {
+  min-width: 0;
+  padding-bottom: 52px;
+  padding-right: 0;
+}
+
+.visit-visa-swiper {
+  overflow: hidden;
+}
+
+/* Card: ample top padding, consistent vertical rhythm */
+.visit-visa-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 10px;
+  /* background: var(--color-white); */
+  /* border-radius: 12px; */
+  /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); */
+  /* border: 1px solid rgba(0, 0, 0, 0.04); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* color: var(--color-dark); */
+  /* text-decoration: none; */
+  /* height: 100%; */
+  min-height: 220px;
+}
+
+.visit-visa-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 77, 142, 0.12);
+}
+
+/* Globe: moderate gap below to title */
+.visit-visa-card-globe {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  background: linear-gradient(145deg, var(--color-light-bg), var(--color-mid-bg));
+  color: var(--color-primary);
+  font-size: 32px;
+  box-shadow:
+    inset -4px -4px 12px rgba(0, 0, 0, 0.08),
+    inset 4px 4px 12px rgba(255, 255, 255, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.visit-visa-globe-us { background: linear-gradient(145deg, #bf0a30 0%, #002868 100%); color: #fff; }
+.visit-visa-globe-ca { background: linear-gradient(145deg, #ef4135 0%, #000 100%); color: #fff; }
+.visit-visa-globe-uk { background: linear-gradient(145deg, #012169 0%, #c8102e 100%); color: #fff; }
+.visit-visa-globe-au { background: linear-gradient(145deg, #00008b 0%, #00843d 100%); color: #fff; }
+.visit-visa-globe-nz { background: linear-gradient(145deg, #00247d 0%, #012169 100%); color: #fff; }
+
+.visit-visa-card-image {
+  overflow: hidden;
+  padding: 0;
+  background: none;
+}
+.visit-visa-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* White airplane near / wrapping the flag sphere */
+.visit-visa-plane {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  font-size: 16px;
+  color: var(--color-white);
+  background: #0db4b9;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Visa title: consistent gap above button */
+.visit-visa-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Apply Now: teal, adequate padding, slightly rounded */
+.visit-visa-card-btn {
+  display: inline-block;
+  padding: 5px 20px;
+  background: #004d8e;
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: auto;
+  border: none;
+}
+
+.visit-visa-card:hover .visit-visa-card-btn {
+  background: #0a9a9e;
+  transform: scale(1.02);
+}
+
+/* Visit visa Swiper pagination */
+.visit-visa-swiper {
+  padding-bottom: 30px;
+}
+.visit-visa-pagination {
+  bottom: -8px !important; /* or whatever value you want */
+  
+}
+
+.visit-visa-pagination .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin: 0 4px !important;
+  background: rgba(6, 27, 54, 0.18);
+  opacity: 1;
+  transition: all 0.25s ease;
+}
+
+.visit-visa-pagination .swiper-pagination-bullet-active {
+  width: 9px;
+  height: 9px;
+  background: #0db4b9;
+  transform: none;
+}
+
+@media (max-width: 992px) {
+  .visit-visa-promo-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .visit-visa-promo-header {
+    position: static;
+  }
+  .visit-visa-promo-title {
+    text-align: center;
+  }
+  .visit-visa-promo-accent {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .visit-visa-promo-desc {
+    text-align: center;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .visit-visa-card {
+    min-height: 240px;
+    padding: 24px 16px 20px;
+  }
+  .visit-visa-card-globe {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+}
+
 /* Features */
 .features-strip {
   background: var(--color-white);
@@ -229,7 +521,7 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 0;
   box-shadow: 0 4px 30px rgba(0,0,0,0.1);
 }
@@ -485,9 +777,23 @@
 .global-network-carousel-wrap {
   position: relative;
   overflow: hidden;
-  /* background: var(--color-white); */
   border-radius: 12px;
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.global-network-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.global-network-grid .branch-card {
+  width: 140px;
+  flex-shrink: 0;
 }
 
 .global-network-swiper {
@@ -576,6 +882,7 @@
 }
 
 @media (max-width: 480px) {
+  .global-network-grid .branch-card { width: 120px; }
   .global-network-swiper .swiper-slide { width: 120px; }
   .branch-card-inner { min-height: 120px; padding: 20px 12px; }
   .branch-img { width: 48px; height: 48px; }
@@ -584,6 +891,7 @@
 
 @media (min-width: 1024px) {
   .carousel-fade { width: 96px; }
+  .global-network-grid .branch-card { width: 160px; }
   .global-network-swiper .swiper-slide { width: 160px; }
   .branch-card-inner { min-height: 150px; padding: 28px 20px; }
   .branch-img { width: 64px; height: 64px; }
