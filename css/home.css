@@ -2,7 +2,7 @@
 .hero {
   margin-top: 0;
   position: relative;
-  height: 800px;
+  height: 700px;
   overflow: hidden;
 }
 
@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  min-height: 800px;
+  min-height: 700px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -391,8 +391,8 @@
 }
 
 .tourist-visa-cta {
-  background: linear-gradient(135deg, rgba(43, 169, 224, 0.08), rgba(0, 77, 142, 0.06));
-  border: 1px solid rgba(43, 169, 224, 0.2);
+  background: var(--color-dark);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 24px 28px;
   text-align: center;
@@ -401,23 +401,23 @@
 .tourist-visa-cta p {
   margin: 0;
   font-size: 15px;
-  color: var(--color-dark);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.7;
 }
 
 .tourist-visa-cta a {
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .tourist-visa-cta a:hover {
-  color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .tourist-visa-cta i {
-  color: var(--color-primary);
+  color: var(--color-accent);
   margin-right: 8px;
 }
 
