@@ -828,6 +828,11 @@
   margin-bottom: 16px;
 }
 
+.about-content .about-tagline .slogan-em {
+  color: var(--color-accent) !important;
+  font-weight: 800;
+}
+
 .about-text {
   line-height: 1.8;
   margin-bottom: 24px;

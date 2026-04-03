@@ -52,6 +52,11 @@
   margin-bottom: 20px;
 }
 
+.footer .logo-img {
+  height: 7rem;
+  max-width: 200px;
+}
+
 .footer .logo-icon {
   width: 42px;
   height: 42px;
@@ -90,6 +95,18 @@
   line-height: 1.7;
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.80);
+}
+
+.footer-about .footer-tagline {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+}
+
+.footer-about .footer-tagline + p {
+  margin-top: 0;
 }
 
 .social-links {

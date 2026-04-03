@@ -32,6 +32,14 @@ header.scrolled {
   flex-shrink: 0;
 }
 
+.logo-img {
+  display: block;
+  height: 90px;
+  width: auto;
+  max-width: min(220px, 42vw);
+  object-fit: contain;
+}
+
 .logo-icon {
   width: 42px;
   height: 42px;

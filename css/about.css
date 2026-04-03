@@ -25,6 +25,14 @@
 .about-intro .about-content p { color: rgba(255, 255, 255, 0.9); }
 .about-intro .about-content .section-label { color: rgba(255, 255, 255, 0.7); }
 
+.about-intro .about-content .brand-slogan {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2BA9E0 !important;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+}
+
 .about-intro .about-content .value-item {
   background: rgba(255, 255, 255, 0.1);
   border-left-color: #2BA9E0;
