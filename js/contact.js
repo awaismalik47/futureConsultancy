@@ -1,33 +1,45 @@
-(function() {
-  const form = document.getElementById('contactForm');
-  const successMsg = document.getElementById('successMsg');
-  const faqItems = document.querySelectorAll('.faq-item');
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-  // Contact form submit
-  if (form && successMsg) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      successMsg.classList.remove('hidden');
-      form.reset();
-      setTimeout(function() {
-        successMsg.classList.add('hidden');
-      }, 5000);
-    });
-  }
+  const btn = this.querySelector(".btn-submit");
+  const successMsg = document.getElementById("successMsg");
 
-  // FAQ accordion
-  if (faqItems.length > 0) {
-    faqItems.forEach(function(item) {
-      var btn = item.querySelector('.faq-q');
-      if (btn) {
-        btn.addEventListener('click', function() {
-          var isOpen = item.classList.contains('open');
-          faqItems.forEach(function(i) { i.classList.remove('open'); });
-          if (!isOpen) {
-            item.classList.add('open');
-          }
-        });
-      }
+  // Loading state
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+  const templateParams = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    message: document.getElementById("message").value,
+  };
+
+  emailjs.send("service_qzn9foe", "template_k48910s", templateParams)
+    .then(() => {
+      // Show success message
+      successMsg.classList.remove("hidden");
+      this.reset();
+
+      btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+      btn.style.background = "#22c55e";
+
+      // Reset button after 4 seconds
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        btn.style.background = "";
+      }, 4000);
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Failed — Try Again';
+      btn.style.background = "#ef4444";
+
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        btn.style.background = "";
+      }, 3000);
     });
-  }
-})();
+});
