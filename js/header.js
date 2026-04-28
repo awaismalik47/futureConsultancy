@@ -32,13 +32,15 @@
       });
     });
 
-    // Mobile: toggle dropdown on click
+    // Dropdown toggle links should not navigate to #
     desktopNav.querySelectorAll('.nav-item.has-dropdown').forEach(function(item) {
       var link = item.querySelector('.nav-link');
       if (link) {
         link.addEventListener('click', function(e) {
-          if (window.innerWidth <= 992) {
+          if (link.getAttribute('href') === '#') {
             e.preventDefault();
+          }
+          if (window.innerWidth <= 992) {
             item.classList.toggle('mobile-open');
           }
         });
