@@ -15,7 +15,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     message: document.getElementById("message").value,
   };
 
-  emailjs.send("service_qzn9foe", "template_k48910s", templateParams)
+  emailjs.send("service_dfypv8d", "template_4ykrfok", templateParams)
     .then(() => {
       // Show success message
       successMsg.classList.remove("hidden");
